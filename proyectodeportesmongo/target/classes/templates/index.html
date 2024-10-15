@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal Mejorada</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #343a40;
+    }
+
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgb(248, 235, 46), rgba(247, 144, 10, 0.932)), url('https://images.unsplash.com/photo-1523475496153-3d6ccf1539a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHxncmFkaWVudHxlbnwwfHx8fDE2MzkwNjg0OTg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      padding: 2rem;
+      border-radius: 15px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .hero-subtitle {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .btn-custom {
+      background-color: #ffc107;
+      color: #343a40;
+      border: none;
+      transition: background-color 0.3s, transform 0.3s;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .btn-custom:hover {
+      background-color: #e0a800;
+      transform: translateY(-2px);
+    }
+
+    .form-section {
+      padding: 4rem 0;
+      background: #ffffff;
+      border-radius: 10px;
+      margin-top: -50px;
+    }
+
+    .form-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .form-card {
+      margin-bottom: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .form-card-body {
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    footer {
+      padding: 1.5rem;
+      background: #343a40;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Carlos David Murillo</h1>
+    <p class="hero-subtitle">Grupo: D191</p>
+    <a href="#formularios" class="btn btn-custom">Ver Formularios</a>
+  </div>
+</div>
+
+<div id="formularios" class="container form-section">
+  <h2 class="text-center">Formularios</h2>
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+      <div class="card form-card">
+        <a href="/equipos/">
+          <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/NREAVTXS2VHFTDDNGZWSYYSMZE.jpg" alt="Formulario Equipo">
+        </a>
+        <div class="card-body form-card-body">
+          <h5>Formulario Equipo</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card form-card">
+        <a href="/asociacion/">
+          <img src="https://abcmundial.com/sites/default/files/styles/noticia_y_nota_822_x_456/public/noticias/2021/04/19/manchester-city-bayern-munich-real-madrid-liverpool-psg-barcelona%20%28Copy%29.jpg?itok=KmAWiU05" alt="Formulario Asociación">
+        </a>
+        <div class="card-body form-card-body">
+          <h5>Formulario Asociación</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card form-card">
+        <a href="/competicion/">
+          <img src="https://thumbs.dreamstime.com/z/colecci%C3%B3n-de-logotipos-las-ligas-f%C3%BAtbol-europeas-principales-127569593.jpg?ct=jpeg" alt="Formulario Competición">
+        </a>
+        <div class="card-body form-card-body">
+          <h5>Formulario Competición</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mx-auto">
+      <div class="card form-card">
+        <a href="/director/">
+          <img src="https://www.infobae.com/resizer/v2/IK67YDVKLFEQ5NI24EX3VLJAGU.jpg?auth=856bf2ac76a6128b54557462fd8395d5bfd4751a47ba14ad52241525594cf60f&smart=true&width=992&height=558&quality=85" alt="Formulario Director">
+        </a>
+        <div class="card-body form-card-body">
+          <h5>Formulario Director</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mx-auto">
+      <div class="card form-card">
+        <a href="/jugadores/">
+          <img src="https://www.futboltotal.com.mx/wp-content/uploads/2018/03/centenarios-campions-league-benzema.jpg" alt="Formulario Jugador">
+        </a>
+        <div class="card-body form-card-body">
+          <h5>Formulario Jugador</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+	

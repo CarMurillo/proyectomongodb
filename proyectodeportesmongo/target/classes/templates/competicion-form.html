@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Formulario Competición</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" th:href="@{/css/team_form.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.png}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .return {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .return a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .return a:hover {
+            text-decoration: underline;
+        }
+        .form-group label {
+            font-weight: 600;
+        }
+        .button {
+            text-align: center;
+        }
+        .button button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <div class="cont">
+        <div class="return">
+            <a th:href="@{/competicion/}">Regresar</a>
+        </div>
+        <form th:action="@{/competicion/save}" th:object="${competicion}" method="post">
+            <input type="hidden" th:field="*{id}">
+            
+            <div class="form-group">
+                <label for="competicion">Competición:</label>
+                <input type="text" id="competicion" th:field="*{nombre}" class="form-control" placeholder="Ingrese el nombre de la competición">
+            </div>
+
+            <div class="form-group">
+                <label for="premio">Premio:</label>
+                <input type="text" id="premio" th:field="*{premio}" class="form-control" placeholder="Ingrese el premio">
+            </div>
+
+            <div class="form-group">
+                <label for="fechainicio">Fecha Inicio:</label>
+                <input type="date" id="fechainicio" th:field="*{fechainicio}" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="fechafin">Fecha Final:</label>
+                <input type="date" id="fechafin" th:field="*{fechaFin}" class="form-control">
+            </div>
+
+            <div class="button">
+                <button type="submit">Agregar</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!-- Optional JavaScript -->
+<script th:src="@{https://code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js}" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
